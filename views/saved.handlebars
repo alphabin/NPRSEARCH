@@ -1,0 +1,43 @@
+<!--Saved Articles Page-->
+
+<div class="container">
+
+    <div class="col-md-12 jumbotron">
+        <div class="text-center">
+            <h1> Archived Articles</h1>
+        </div>
+    </div>
+    <div class="col-md-12 mainContent">
+        {{#if article}}
+            {{#each article}}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2>{{this.headline}}</h2>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <img src={{this.picUrl}} alt={{this.headline}} style="width:350px!important;height:300px important;">
+                        <br><br>
+                        <p> {{this.brief}}</p>
+                        <a href={{this.url}} target="_blank">{{this.url}}</a>
+                        <br><br>
+                       
+                        <button type="button" class="btn btn-success addNote" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}>Add a Note</button>
+                        <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Please Select your favorites</h4>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+<!--Clicked Notes Modal-->
+{{#each article}}
+    {{> notes-modal }}
+{{/each}}

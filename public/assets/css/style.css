@@ -1,0 +1,41 @@
+.jumbotron {
+    background-image: url("/assets/images/background.jpg");
+    padding-top: 70px;
+    background-size: 10% 10%;
+    height: 30px;
+   
+}
+
+.panel-body{
+    background-image: url("/assets/images/bakcard3.jpg");
+    background-blend-mode: difference;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 70px;
+    color: rgb(14, 33, 46);
+    font-style: oblique;
+    font-size: 18px;
+    font: outline;
+    font-family: fantasy;
+    font-weight: bold;
+    outline-color: mediumvioletred;
+    outline-style: double;
+    outline-width: 2px;
+    text-align: center;
+}
+
+.mainContent{
+    margin-top: 20%;
+}
+.deleteNote {
+	display: inline-block;
+}
+
+.previousNotes {
+    display: inline-block;
+    width: 90%
+}
+
+#scrape {
+    margin: 8px 0px;
+}
