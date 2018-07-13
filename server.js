@@ -34,7 +34,8 @@ AppHelper.use(bodyParser.urlencoded({
 //Define to the App helper where the static resources are at "in the public folder"
 AppHelper.use(express.static("public"));
 //Local Connection DB Starts Here
-MongooseHelper.connect("mongodb://localhost/nprscraper2018");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+MongooseHelper.connect(MONGODB_URI);
 var Db = MongooseHelper.connection;
 
 var axios = require("axios");
